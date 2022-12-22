@@ -28,7 +28,7 @@
                         <img src="./img/avatar_2.jpg" alt="myImg" class="rounded-circle">
                         <h6 class="mx-2">Filippo</h6>
                     </div>
-                    <div class="icon d-flex justify-content-between">
+                    <div class="d-flex justify-content-between">
                         <i class="fa-solid fa-circle-notch mx-2"></i>
                         <i class="fa-solid fa-message mx-2"></i>
                         <i class="fa-solid fa-ellipsis-vertical mx-2"></i>
@@ -37,7 +37,7 @@
 
                 <!-- notifiche nuovi messaggi -->
                 <div class="row_newMessage d-flex p-2">
-                    <div class="rounded-circle bg-white d-flex align-items-center justify-content-center">
+                    <div class="rounded-circle bg-white d-flex align-items-center justify-content-center bell">
                         <i class="fa-solid fa-bell-slash"></i>
                     </div>
                     <div class="mx-2">
@@ -84,7 +84,7 @@
                             <div class="font-small text-secondary">Ultimo accesso alle orario</div>
                         </div>
                     </div>
-                    <div class="icon d-flex justify-content-between">
+                    <div class="d-flex justify-content-between">
                         <i class="fa-solid fa-magnifying-glass mx-2"></i>
                         <i class="fa-solid fa-message mx-2"></i>
                         <i class="fa-solid fa-ellipsis-vertical mx-2"></i>
@@ -105,13 +105,13 @@
 
                 <!-- input per scrivere il messaggio -->
                 <div class="row_profile d-flex align-items-center p-2 w-100">
-                    <div class="icon mx-2">
+                    <div class="mx-3">
                         <i class="fa-regular fa-face-smile"></i>
                     </div>
-                    <div class="w-100">
+                    <div class="w-100 mx-3">
                         <input type="text" placeholder="Scrivi un messaggio" class="form-control" v-model="newMessage" @keyup.enter="addMessage">
                     </div>
-                    <div class="icon mx-2">
+                    <div class="mx-3">
                         <i class="fa-solid fa-microphone"></i>
                     </div>
                 </div>
