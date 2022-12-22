@@ -55,7 +55,7 @@
                 </div>
 
                 <!-- chat -->
-                <div class="h-100 bg-white scroll">
+                <div class="bg-white scroll">
                     <div class="border-top"  v-for="(item, index) in contacts" @click="selectedChat(index)" :class="(activeItem === index ) ? 'bg-gray' : ''">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="d-flex p-1">
@@ -76,10 +76,10 @@
             <div class="container_dx">
 
                 <!-- immagine profilo utente amico, ultimo accesso e icone -->
-                <div class="row_profile d-flex align-items-center p-2 justify-content-between">
+                <div class="row_profile d-flex align-items-center p-2 justify-content-between border-start border-secondary">
                     <div class="d-flex align-items-center">
                         <img :src="imgProfile(activeItem)" alt="myImg" class="rounded-circle">
-                        <div class="p-2">
+                        <div class="mx-2">
                             <h6>{{contacts[activeItem].name}}</h6>
                             <div class="font-small text-secondary">Ultimo accesso alle orario</div>
                         </div>
@@ -92,24 +92,27 @@
                 </div>
 
                 <!-- contenuto chat -->
-                <div class="row">
-                    <div class="col">
-
+                <div class="row-chat background-image p-5 overflow-auto">
+                    <div class="">
+                        <div class="sent">
+                            ciao
+                        </div>
+                        <div class="received">
+                            ciao
+                        </div>
                     </div>
                 </div>
 
                 <!-- input per scrivere il messaggio -->
-                <div class="row">
-                    <div class="col">
-                        <div class="icon">
-
-                        </div>
-                        <div class="input">
-
-                        </div>
-                        <div class="icon">
-
-                        </div>
+                <div class="row_profile d-flex align-items-center p-2 w-100">
+                    <div class="icon mx-2">
+                        <i class="fa-regular fa-face-smile"></i>
+                    </div>
+                    <div class="w-100">
+                        <input type="text" placeholder="Scrivi un messaggio" class="form-control" v-model="newMessage" @keyup.enter="addMessage">
+                    </div>
+                    <div class="icon mx-2">
+                        <i class="fa-solid fa-microphone"></i>
                     </div>
                 </div>
             </div>

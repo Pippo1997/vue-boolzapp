@@ -28,12 +28,10 @@
 
 .container_sx{
     width: 35%;
-    height: 100%;
 }
 
 .container_dx{
     width: 65%;
-    height: 100%;
 }
 
 .row_profile{
@@ -43,7 +41,6 @@
 
 .row_newMessage{
     background-color: rgba(142,218,252,255);
-    width: 100%;
 }
 
 .rounded-circle{
@@ -59,7 +56,7 @@
     color: rgba(177,177,177,255);
 }
 
-.fa-solid{
+i{
     cursor: pointer;
 }
 
@@ -74,4 +71,11 @@
 
 .font-small{
     font-size: 12px;
+}
+
+.background-image{
+    background-image: url("../img/mine.jpg");
+    object-fit: cover;
+    background-repeat: repeat;
+    height: calc(100% - 120px);
 }

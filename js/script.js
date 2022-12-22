@@ -4,6 +4,7 @@ const { createApp } = Vue
     data() {
       return {
         activeItem: 0,
+        newMessage: ``,
         contacts: [
           {
           name: 'Michele',
