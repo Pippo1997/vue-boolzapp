@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 #app{
@@ -19,7 +20,58 @@
     );
 }
 
-.container{
-    height: 650px;
+.container_all{
+    height: 100%;
+    width: 80%;
     background-color: white;
+}
+
+.container_sx{
+    width: 35%;
+    height: 100%;
+}
+
+.container_dx{
+    width: 65%;
+    height: 100%;
+}
+
+.row_profile{
+    background-color: rgba(234,234,234,255);
+    width: 100%;
+}
+
+.row_newMessage{
+    background-color: rgba(142,218,252,255);
+    width: 100%;
+}
+
+.rounded-circle{
+    height: 50px;
+}
+
+.fa-bell-slash{
+    padding: 1rem;
+    color: rgba(142,218,252,255);
+}
+
+.icon{
+    color: rgba(177,177,177,255);
+}
+
+.fa-solid{
+    cursor: pointer;
+}
+
+.scroll{
+    overflow-y: auto;
+    cursor: pointer;
+}
+
+.bg-gray{
+    background-color: rgba(233,235,235,255);
+}
+
+.font-small{
+    font-size: 12px;
 }
