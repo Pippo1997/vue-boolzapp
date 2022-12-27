@@ -88,7 +88,7 @@ i:hover{
     color: gold;
 }
 
-.received, .sent{
+.msg{
     padding: 10px;
     margin: 1em;
     min-width: 10%;
@@ -102,6 +102,16 @@ i:hover{
 }
 
 .sent{
-    background-color: #d5f9ba;
+    background-color: rgba(213,249,186,255);
     align-self: flex-end;
+}
+
+.data{
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    font-size: 8px;
+    bottom: 1px;
+    right: 5px;
+    color: rgb(183, 183, 183);
 }

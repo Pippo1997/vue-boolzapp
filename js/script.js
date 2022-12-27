@@ -182,20 +182,20 @@ const { createApp } = Vue
     // funzioni per selezionare la chat desiderata
     selectedChat(index){
       this.activeItem = index;
-  },
+    },
 
-  // funzione per cercare chat
-  searchContacts() {
-    let searchProfile = this.search.toLowerCase()
-    for (let i = 0; i < this.contacts.length; i++) {
-        if (this.contacts[i].name.toLowerCase().includes(searchProfile)) {
-            this.contacts[i].visible = true;
-        }
-        else if (!(this.contacts[i].name.toLowerCase().includes(searchProfile))) {
-            this.contacts[i].visible = false;
-        }
-    }
-  },
+    // funzione per cercare chat
+    searchContacts() {
+      let searchProfile = this.search.toLowerCase()
+      for (let i = 0; i < this.contacts.length; i++) {
+          if (this.contacts[i].name.toLowerCase().includes(searchProfile)) {
+              this.contacts[i].visible = true;
+          }
+          else if (!(this.contacts[i].name.toLowerCase().includes(searchProfile))) {
+              this.contacts[i].visible = false;
+          }
+      }
+    },
 
   },
   }).mount('#app')

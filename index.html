@@ -92,12 +92,10 @@
                 </div>
 
                 <!-- contenuto chat -->
-                <div class="row-chat background-image p-5 overflow-auto">
-                    <div class="d-flex flex-column" v-for="(item, index) in contacts[activeItem].messages">
-                        <div :calss="(contacts[activeItem].messages[index].status == 'sent') ? 'sent' : 'received'">
-                            <div>{{contacts[activeItem].messages[index].message}}</div>
-                            <div class="time">{{contacts[activeItem].messages[index].date}}</div>
-                        </div>   
+                <div class="row-chat background-image p-5 overflow-auto d-flex flex-column">
+                    <div class="msg d-flex" v-for="(msg, index) in contacts[activeItem].messages" :class="(msg.status === 'sent') ? 'sent' : 'received'">
+                        <div>{{msg.message}}</div>
+                        <div class="data">12.00</div>
                     </div>
                 </div>
 
