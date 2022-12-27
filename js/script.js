@@ -4,7 +4,8 @@ const { createApp } = Vue
     data() {
       return {
         activeItem: 0,
-        newMessage: ``,
+        search: '',
+        messageEnter: '',
         contacts: [
           {
           name: 'Michele',
@@ -170,19 +171,33 @@ const { createApp } = Vue
           ]
       }
     },
-    methods: {
 
-      // funzione per immagini del profilo
-      imgProfile(index){
-        return "./img/avatar" + this.contacts[index].avatar + ".jpg";
-      },
+  methods: {
 
-      // funzioni per selezionare la chat desiderata
-      selectedChat(index){
-        this.activeItem = index;
+    // funzione per immagini del profilo
+    imgProfile(index){
+      return "./img/avatar" + this.contacts[index].avatar + ".jpg";
     },
 
-    },
+    // funzioni per selezionare la chat desiderata
+    selectedChat(index){
+      this.activeItem = index;
+  },
+
+  // funzione per cercare chat
+  searchContacts() {
+    let searchProfile = this.search.toLowerCase()
+    for (let i = 0; i < this.contacts.length; i++) {
+        if (this.contacts[i].name.toLowerCase().includes(searchProfile)) {
+            this.contacts[i].visible = true;
+        }
+        else if (!(this.contacts[i].name.toLowerCase().includes(searchProfile))) {
+            this.contacts[i].visible = false;
+        }
+    }
+  },
+
+  },
   }).mount('#app')
 
 
