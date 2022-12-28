@@ -4,8 +4,8 @@ const { createApp } = Vue
     data() {
       return {
         activeItem: 0,
+        newMessage: '',
         search: '',
-        messageEnter: '',
         contacts: [
           {
           name: 'Michele',
@@ -184,7 +184,7 @@ const { createApp } = Vue
       this.activeItem = index;
     },
 
-    // funzione per cercare chat
+    // funzione per cercare chat tramite lettere 
     searchContacts() {
       let searchProfile = this.search.toLowerCase()
       for (let i = 0; i < this.contacts.length; i++) {
@@ -196,6 +196,28 @@ const { createApp } = Vue
           }
       }
     },
+
+    addMsg(index){ 
+
+      newMsg =
+      {
+          date: `12.00`,
+          message: this.newMessage,
+          status: 'sent',
+      },
+
+      this.contacts[index].messages.push(newMsg);
+      this.newMessage = "";
+      setTimeout(() => {
+          newMsgResponder =
+          {
+              date: `12.00`,
+              message: 'ooook!',
+              status: 'received'
+          },
+          this.contacts[index].messages.push(newMsgResponder)
+      },1000)
+  },
 
   },
   }).mount('#app')
