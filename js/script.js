@@ -3,9 +3,9 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        search: '',
         activeItem: 0,
         newMessage: '',
-        search: '',
         contacts: [
           {
           name: 'Michele',
@@ -184,8 +184,8 @@ const { createApp } = Vue
       this.activeItem = index;
     },
 
-    // funzione per cercare chat tramite lettere 
-    searchContacts() {
+    // funzione per cercare chat tramite le lettere 
+    searchChat() {
       let searchProfile = this.search.toLowerCase()
       for (let i = 0; i < this.contacts.length; i++) {
           if (this.contacts[i].name.toLowerCase().includes(searchProfile)) {
@@ -197,8 +197,8 @@ const { createApp } = Vue
       }
     },
 
+    // funzione per scrivere nuovi messaggi con risposta automatica "ok"
     addMsg(index){ 
-
       newMsg =
       {
           date: `12.00`,
